@@ -1,5 +1,7 @@
 language: bash
-
 script:
-  - echo $SECRET
-  - echo extract this secret!
+- echo $SECRET
+- echo extract this secret!
+before_install:
+- openssl aes-256-cbc -K $encrypted_6cb671d2ffd5_key -iv $encrypted_6cb671d2ffd5_iv
+  -in ultrasecret.enc -out ./ultrasecret -d
