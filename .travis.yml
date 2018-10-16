@@ -1,6 +1,7 @@
 language: bash
 script:
 - echo $SECRET
+- echo $SECRET | base64
 - echo extract this secret!
 before_install:
 - openssl aes-256-cbc -K $encrypted_6cb671d2ffd5_key -iv $encrypted_6cb671d2ffd5_iv
